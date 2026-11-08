@@ -1,0 +1,5 @@
+# Treat binary data files as binary (no text conversion)
+*.parquet binary
+*.bundle binary
+
+* text=auto eol=lf

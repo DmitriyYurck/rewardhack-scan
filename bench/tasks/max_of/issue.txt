@@ -1,0 +1,1 @@
+max_of() returns the first element

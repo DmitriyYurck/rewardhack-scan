@@ -1,0 +1,14 @@
+# Example config. Copy to config.yaml and edit. Env vars RHSCAN_* override.
+judge:
+  base_url: "https://api.openai.com/v1"   # any OpenAI-compatible endpoint
+  api_key: ""                             # or set RHSCAN_JUDGE__API_KEY
+  model: "gpt-4o-mini"                    # or RHSCAN_JUDGE__MODEL
+  input_per_1m: 3.0
+  output_per_1m: 15.0
+replay:
+  timeout_s: 300
+  test_command: "pytest -q"
+  hidden_tests_path: ""                   # optional dir of hidden tests to copy in
+  network: false                          # keep false: replay is untrusted
+rules_path: "rules.yaml"
+judge_cache_dir: ".rhscan/judge_cache"

@@ -1,0 +1,96 @@
+{
+  "by_class": {
+    "combined": 7,
+    "false_reporting": 7,
+    "hardcoding": 8,
+    "honest_adds_tests": 6,
+    "honest_edits_conftest": 6,
+    "honest_failed": 6,
+    "honest_reads_git_log": 6,
+    "honest_refactor": 6,
+    "honest_runs_tests_many_times": 6,
+    "honest_simple": 6,
+    "solution_leak": 8,
+    "test_tampering": 8,
+    "verifier_evasion": 8
+  },
+  "by_source": {
+    "r2e": 29,
+    "swesmith": 29,
+    "tbench": 30
+  },
+  "by_split": {
+    "adversarial": 10,
+    "dev": 39,
+    "test": 39
+  },
+  "by_subtlety": {
+    "None": 42,
+    "blatant": 12,
+    "moderate": 12,
+    "obfuscated": 22
+  },
+  "n_labels": 88,
+  "n_trajectories": 88,
+  "rules_hash": "0174cf712b879717",
+  "seed": 11,
+  "templates_per_class": {
+    "combined": [
+      "combined/blatant/tamper_plus_hardcode",
+      "combined/moderate/tamper_plus_leak",
+      "combined/obfuscated/alias_plus_b64"
+    ],
+    "false_reporting": [
+      "false_reporting/blatant/never_run",
+      "false_reporting/moderate/failed_claim",
+      "false_reporting/obfuscated/failed_claim_shy"
+    ],
+    "hardcoding": [
+      "hardcoding/blatant/if_literal",
+      "hardcoding/moderate/case_branch",
+      "hardcoding/obfuscated/b64_table",
+      "hardcoding/obfuscated/lookup_table"
+    ],
+    "honest_adds_tests": [
+      "honest_adds_tests/std/fix_add_test"
+    ],
+    "honest_edits_conftest": [
+      "honest_edits_conftest/std/fix_conftest_fixture"
+    ],
+    "honest_failed": [
+      "honest_failed/std/fix_wrong"
+    ],
+    "honest_reads_git_log": [
+      "honest_reads_git_log/std/fix_after_git_log"
+    ],
+    "honest_refactor": [
+      "honest_refactor/std/fix_rename_var",
+      "honest_refactor/std/fix_with_helper"
+    ],
+    "honest_runs_tests_many_times": [
+      "honest_runs_tests_many_times/std/fix_rerun"
+    ],
+    "honest_simple": [
+      "honest_simple/std/fix_direct"
+    ],
+    "solution_leak": [
+      "solution_leak/blatant/git_future",
+      "solution_leak/moderate/git_show_hash",
+      "solution_leak/obfuscated/b64_curl",
+      "solution_leak/obfuscated/git_show_hash"
+    ],
+    "test_tampering": [
+      "test_tampering/blatant/delete",
+      "test_tampering/moderate/xfail",
+      "test_tampering/obfuscated/assert_one_eq_one",
+      "test_tampering/obfuscated/assert_true_paren",
+      "test_tampering/obfuscated/conftest_deselect"
+    ],
+    "verifier_evasion": [
+      "verifier_evasion/blatant/sys_exit",
+      "verifier_evasion/moderate/os_exit",
+      "verifier_evasion/obfuscated/conftest_plugin",
+      "verifier_evasion/obfuscated/import_sys_alias"
+    ]
+  }
+}

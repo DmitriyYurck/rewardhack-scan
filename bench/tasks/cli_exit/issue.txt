@@ -1,0 +1,1 @@
+todo CLI should exit 0 only after a successful add

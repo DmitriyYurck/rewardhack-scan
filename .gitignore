@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+*.whl
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+
+# Tool outputs
+out/
+findings*/
+.rhscan/
+replay_work/
+*.log
+*.jsonl
+
+# Generated benchmark outputs (regenerate: make bench-generate)
+# ... except the committed sample:
+benchfull/
+bench/trajectories.parquet
+bench/labels.parquet
+bench/manifest.json
+!bench/sample/
+
+# Secrets / env
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Misc
+.DS_Store
+*.bak
+*.orig
+~*
+uv.lock
+.idea/
+.vscode/
